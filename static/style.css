@@ -1,0 +1,30 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #233e37; background: #f4f1e8; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 32px 20px; }
+main { width: 100%; max-width: 440px; }
+.eyebrow { font-size: .7rem; font-weight: 750; letter-spacing: .16em; color: #557168; }
+h1 { font-size: clamp(2.6rem, 10vw, 3.8rem); letter-spacing: -.065em; margin: 12px 0 18px; line-height: 1.1; }
+h1 span { color: #ce613f; }
+.intro { line-height: 1.65; color: #53625a; }
+#status { min-height: 1.5em; font-weight: 650; margin: 28px 0 14px; }
+.board { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.cell { aspect-ratio: 1; padding: 0; border: 1px solid #d6ddd3; border-radius: 16px; background: #fffdf8; font: 650 clamp(2rem, 12vw, 3.7rem)/1 system-ui, sans-serif; color: #257362; cursor: pointer; }
+.cell[data-mark="X"] { color: #bc5134; }
+.cell:enabled:hover { background: #e7eee3; }
+.cell:disabled { cursor: default; opacity: 1; }
+.cell.winner { background: #d5e9cf; border-color: #65895d; }
+button:focus-visible, a:focus-visible { outline: 3px solid #bc5134; outline-offset: 4px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.actions button { border: 0; background: #233e37; color: white; border-radius: 9px; padding: 13px 20px; font: 600 .9rem system-ui, sans-serif; cursor: pointer; }
+.actions button:hover { background: #36594f; }
+[hidden] { display: none !important; }
+.note { font-size: .8rem; line-height: 1.6; color: #64736a; margin-top: 24px; }
+a { color: #257362; }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 24px 0; }
+.controls button, select { font: 600 .85rem system-ui, sans-serif; border-radius: 8px; padding: 11px 12px; border: 1px solid #b8c7bd; color: #233e37; background: #fffdf8; }
+.controls #new-game { background: #233e37; color: white; cursor: pointer; }
+.controls label { font-size: .85rem; font-weight: 650; }
+.controls button:enabled, select { cursor: pointer; }
+.controls button:disabled { opacity: .5; cursor: default; }
+#status { margin: 20px 0; }
+#status.error { color: #b52c22; }
